@@ -32,7 +32,7 @@ public class GrowingDays {
             if (sum <= 0) sum = 0;
             cumulativeDegreeDays[i] = sum;
         }
-    }
+    } 
 
     /**
      * Constructs a {@code GrowingDays} object by reading average daily temperatures from

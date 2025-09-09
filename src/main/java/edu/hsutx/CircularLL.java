@@ -108,7 +108,7 @@ public class CircularLL<E> {
         if (head == tail) {
             head = null;
             tail = null;
-        } 
+        }
         else {
             head = head.getNext();
             tail.setNext(head);
