@@ -102,11 +102,20 @@ public class CircularLL<E> {
      */
     public E removeFirst() {
         if (isEmpty()) return null;
-        Node<E> head = tail.getNext();
-        if (head == tail) tail = null;
-        else tail.setNext(head.getNext());
+
+        E answer = head.getData();
+
+        if (head == tail) {
+            head = null;
+            tail = null;
+        } 
+        else {
+            head = head.getNext();
+            tail.setNext(head);
+        }
+
         size--;
-        return head.getData();
+        return answer;
     }
 
     /**

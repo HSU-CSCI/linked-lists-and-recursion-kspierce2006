@@ -29,6 +29,7 @@ public class GrowingDays {
         for (int i=0; i<degrees.length; i++) {
             degreeDays[i] = degrees[i] - threshold;
             sum = sum + degreeDays[i];
+            if (sum <= 0) sum = 0;
             cumulativeDegreeDays[i] = sum;
         }
     }
